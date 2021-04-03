@@ -1,0 +1,73 @@
+﻿@model RMS_Project.Models.RMSClass
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Order Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Order ID
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.O_ID)
+        </dd>
+
+        <dt>
+            Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.O_Name)
+        </dd>
+
+        <dt>
+            Description
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.O_Desc)
+        </dd>
+
+        <dt>
+            Price
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.O_Price)
+        </dd>
+
+        <dt>
+            Type
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.O_Type)
+        </dd>
+
+        <dt>
+            Available
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.O_Stat)
+        </dd>
+
+        <dt>
+            Category
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.O_Cate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.O_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

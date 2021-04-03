@@ -1,0 +1,63 @@
+﻿@model IEnumerable<RMS_Project.Res_Tab>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Restuarent Management System</h2>
+
+<p>
+    @Html.ActionLink("Create New Order", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+            Type
+        </th>
+        <th>
+            Available
+        </th>
+        <th>
+            Category
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.O_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.O_Desc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.O_Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.O_Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.O_Stat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.O_Cate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.O_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.O_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.O_ID })
+        </td>
+    </tr>
+}
+
+</table>
