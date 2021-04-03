@@ -1,0 +1,42 @@
+@using System.Web.Http
+@using System.Web.Http.Controllers
+@using System.Web.Http.Description
+@using System.Collections.ObjectModel
+@using RMS_Project.Areas.HelpPage.Models
+@model Collection<ApiDescription>
+
+@{
+    ViewBag.Title = "About RMS";
+
+    // Group APIs by controller
+    ILookup<HttpControllerDescriptor, ApiDescription> apiGroups = Model.ToLookup(api => api.ActionDescriptor.ControllerDescriptor);
+}
+
+<link type="text/css" href="~/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+<header class="help-page">
+    <div class="content-wrapper">
+        <div class="float-left">
+            <h1>@ViewBag.Title</h1>
+        </div>
+    </div>
+</header>
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <h2>Introduction</h2>
+            <h4>
+                 Restuarent Management System is a Web API Project. The RMS can perform CRUD operations.
+            </h4>
+            <h4>
+                 It is developed as a part of learning Web API for the course "Service Oriented Computing" offered by Dharmsinh Desai University.
+            </h4>
+
+            <br /><br />
+            <h2>Team Members</h2>
+            <h4>This project is developed by:</h4>
+            <h4>Mitanshu Patel</h4>
+            <h4>Devang Patel</h4>
+        </div>
+    </section>
+
+</div>
