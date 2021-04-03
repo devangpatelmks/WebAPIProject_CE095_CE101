@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Res_DBModelStoreContainer" CdmEntityContainer="Res_DBEntities">
+    <EntitySetMapping Name="Res_Tab">
+      <EntityTypeMapping TypeName="Res_DBModel.Res_Tab">
+        <MappingFragment StoreEntitySet="Res_Tab">
+          <ScalarProperty Name="O_ID" ColumnName="O_ID" />
+          <ScalarProperty Name="O_Name" ColumnName="O_Name" />
+          <ScalarProperty Name="O_Desc" ColumnName="O_Desc" />
+          <ScalarProperty Name="O_Price" ColumnName="O_Price" />
+          <ScalarProperty Name="O_Type" ColumnName="O_Type" />
+          <ScalarProperty Name="O_Stat" ColumnName="O_Stat" />
+          <ScalarProperty Name="O_Cate" ColumnName="O_Cate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Res_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Res_Tab">
+    <Key>
+      <PropertyRef Name="O_ID" />
+    </Key>
+    <Property Name="O_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="O_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="O_Desc" Type="nvarchar(max)" />
+    <Property Name="O_Price" Type="nvarchar" MaxLength="50" />
+    <Property Name="O_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="O_Stat" Type="nvarchar" MaxLength="50" />
+    <Property Name="O_Cate" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="Res_DBModelStoreContainer">
+    <EntitySet Name="Res_Tab" EntityType="Self.Res_Tab" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
